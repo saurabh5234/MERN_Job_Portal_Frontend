@@ -10,7 +10,7 @@ const applicationSlice = createSlice({
     message: null,
   },
   reducers: {
-    requestForAllApplications(state, action) {
+    requestForAllApplications(state) {
       state.loading = true;
       state.error = null;
     },
@@ -23,7 +23,7 @@ const applicationSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
-    requestForMyApplications(state, action) {
+    requestForMyApplications(state) {
       state.loading = true;
       state.error = null;
     },
@@ -36,7 +36,7 @@ const applicationSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
-    requestForPostApplication(state, action) {
+    requestForPostApplication(state) {
       state.loading = true;
       state.error = null;
       state.message = null;
@@ -51,7 +51,7 @@ const applicationSlice = createSlice({
       state.error = action.payload;
       state.message = null;
     },
-    requestForDeleteApplication(state, action) {
+    requestForDeleteApplication(state) {
       state.loading = true;
       state.error = null;
       state.message = null;
@@ -67,13 +67,13 @@ const applicationSlice = createSlice({
       state.message = null;
     },
 
-    clearAllErrors(state, action) {
+    clearAllErrors(state) {
       state.error = null;
-      state.applications = state.applications;
+      state.applications = null;
     },
-    resetApplicationSlice(state, action) {
+    resetApplicationSlice(state) {
       state.error = null;
-      state.applications = state.applications;
+      state.applications = null;
       state.message = null;
       state.loading = false;
     },
