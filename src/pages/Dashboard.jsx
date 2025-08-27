@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { logout, clearAllUserErrors } from "../store/slices/userSlice";
 import { LuMoveRight } from "react-icons/lu";
 import MyProfile from "../components/Myprofile";
-import UpdateProfile from "../components/UpdateProfile";
+import UpdateProfile from "../components/updateProfile";
 import UpdatePassword from "../components/UpdatePassword";
 import MyJobs from "../components/MyJobs";
 import JobPost from "../components/JobPost";

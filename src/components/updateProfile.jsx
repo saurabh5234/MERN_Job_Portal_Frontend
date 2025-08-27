@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   clearAllUpdateProfileErrors,
   updateProfile,
@@ -15,7 +15,6 @@ const UpdateProfile = () => {
   );
 
   const dispatch = useDispatch();
-  const navigateTo = useNavigate();
 
   const [name, setName] = useState(user && user.name);
   const [email, setEmail] = useState(user && user.email);
@@ -28,7 +27,7 @@ const UpdateProfile = () => {
   );
   const [thirdNiche, setThirdNiche] = useState(user && user.niches?.thirdNiche);
   const [resume, setResume] = useState(null);
-  const [resumePreview, setResumePreview] = useState(user && user.resume?.url);
+  const [ setResumePreview] = useState(user && user.resume?.url);
 
   const handleUpdateProfile = () => {
     const formData = new FormData();
